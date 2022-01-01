@@ -21,6 +21,7 @@ const adminRoutes = require('./server/routes/adminRoutes.js')
 
 /* Settings and configurations */
 const app = express()
+
 // const __dirname = path.resolve(path.dirname(''))
 dotenv.config()
 app.set('json spaces', 2)
