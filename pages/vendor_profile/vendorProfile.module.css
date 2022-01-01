@@ -1,0 +1,46 @@
+
+/* :root{
+    background: whitesmoke;
+} */
+.infoCard{
+    height : 200px;
+    width: 90%;
+    margin: 10px auto;
+    padding : 30px 10px;
+}
+.info_card_image{
+    height : 10%;
+    width : 100%;
+    /* background : grey; */
+    text-align : center;
+}
+.avatar{
+    /* height: ; */
+    height:200px;
+    width: 200px;
+    border-radius: 50%;
+    /* width : 100%; */
+}
+.uploadSection{
+    padding : 0px 2%;
+    /* margin : 0 auto; */
+}
+.centerGrid{
+    margin : 0 auto;
+    /* background: yellow; */
+}
+.uploads{
+    padding-left: 50px;
+}
+.info_card_content{
+    padding : 2%;
+}
+.create{
+    float: right;
+    background : whitesmoke;
+    padding: 5px;
+    border-radius: 7px;
+}
+.addProperty{
+    float: right;
+}

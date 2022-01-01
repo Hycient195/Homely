@@ -1,0 +1,30 @@
+#title{
+    float : left;
+    font-weight: 500;
+    /* background: brown; */
+}
+
+#price{
+    float : right;
+    font-weight: 1000;
+    /* background : red; */
+}
+.titleBlock{
+    padding: 0;
+    height : 35px;
+}
+#con{
+    transition : all 5s ease;
+    background : white;
+    /* transition-delay: 2000ms; */
+}
+#con:hover{
+    background : linear-gradient(transparent, transparent, black );
+}
+.typography{
+    margin : 2px;
+    /* background: red; */
+}
+#pic{
+    height : 300px;
+}

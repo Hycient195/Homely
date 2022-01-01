@@ -1,0 +1,47 @@
+#l_title{
+    float : left;
+    font-weight: 500;
+    width : 40%;
+}
+
+#l_price{
+    float : right;
+    font-weight: 1000;
+    width : 20%;
+    /* background : red; */
+}
+.l_titleBlock{
+    padding: 0;
+    height : 35px;
+}
+#l_con{
+    transition : all 5s ease;
+    background : white;
+    /* transition-delay: 2000ms; */
+}
+/* #con:hover{
+    background : linear-gradient(transparent, transparent, black );
+} */
+.title_typography{
+    margin : 20px;
+    border: 3px solid white;
+    height : 22px;
+    background: rgb(212, 212, 212);
+}
+.location_typography{
+    margin : 20px;
+    border: 3px solid white;
+    height : 20px;
+    background: rgb(212, 212, 212);
+}
+.body_typography{
+    margin : 20px;
+    border: 3px solid white;
+    height : 16px;
+    background: rgb(212, 212, 212);
+}
+#l_pic{
+    height : 300px;
+    border : none;
+    background : silver;
+}

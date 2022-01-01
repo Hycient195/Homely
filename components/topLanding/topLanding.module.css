@@ -1,0 +1,29 @@
+.top_landing_left{
+    float : left;
+    height: 800px;
+    width: 50%;
+}
+
+
+.top_landing_right{
+    float : right;
+    height : 800px;
+    width: 50%;
+    /* background-color: cyan; */
+    /* background: url(../../../img/landing/landing3.jpg); */
+    background-size: cover;
+}
+
+.find{
+    /* vertical-align: middle; */
+    margin: 300px 0;
+    padding-right: 30px;
+    font-family: serif;
+    text-align: right;
+    font-size: 100px;
+    /* padding : 200px */
+}
+
+.container{
+    height : 800px;
+}

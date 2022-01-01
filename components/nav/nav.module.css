@@ -1,0 +1,53 @@
+.body{
+    background : white;
+    width : 50%;
+    color : black !important;
+    height : 70px;
+    /* float:inline-start; */
+    position: fixed;
+    top : 0;
+}
+.sideNav{
+    height : 300px;
+    width : 60px;
+    background: whitesmoke !important;
+}
+.container{
+    height: 0px;
+    width : 50%;
+    background: tomato !important;
+    margin-bottom : 100px;
+}
+/* select{
+    background : brown;
+    border : none;
+    width : 60px;
+} */
+.signIn{
+    float : right ;
+    margin : 20px 20px 0px 0px !important;
+    background: rgb(155, 245, 20) !important;
+}
+.avatar{
+    height: 50px;
+    width : 50px;
+    border-radius : 50%;
+    /* float : right; */
+    /* margin : 15px 20px 0px 0px !important; */
+
+}
+.user{
+    float : right;
+    /* background: red; */
+    margin: 15px 10px 0px 0px;
+}
+.select{
+    float : right;
+    padding : 0px 5px;
+    margin-top : 20px;
+    background: white;
+    width : 25px;
+    /* border : 1px solid gre        <Component {...pageProps} />
+y; */
+    border-radius: 5px;
+}

@@ -1,0 +1,19 @@
+.paper{
+    height :200px;
+    border-radius : 5px;
+}
+.propertyImage{
+    height: 100%;
+    /* width : 100%; */
+    /* float : left; */
+    /* background : green; */
+}
+.propertyContent{
+    /* float : right; */
+    padding : 2%;
+    /* background : red; */
+}
+.image{
+    height: 100%;
+    width : 100% !important;
+}
