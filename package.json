@@ -2,11 +2,12 @@
   "name": "homer",
   "private": true,
   "scripts": {
+    "start-server" : "node server.js",
+    "building" : "next build",
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run start-server && npm run building",
     "start": "next start",
-    "lint": "next lint",
-    "start-server" : "node server.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
