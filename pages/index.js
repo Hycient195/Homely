@@ -9,7 +9,7 @@ import Properties from '../components/properties/Properties'
 import styles from './index.module.css'
 
 const Home = () => {
-    return ( 
+    return (
         <div className={styles.container}>
             <TopLanding/>
             <br/>
