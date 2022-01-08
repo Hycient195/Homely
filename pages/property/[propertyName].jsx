@@ -2,16 +2,25 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { fetchSingleProperty } from '../../redux/actions/propertyActions';
 import { Typography } from '@material-ui/core';
+import * as api from '../../redux/api/api';
+import { useRouter } from 'next/router';
 
-export default function ({ propertyName, _id }){
-    const dispatch = useDispatch();
+export default function ({ property }){
+    const router = useRouter();
+    // console.log(router.query)
+    if(router.isFallback){
+        return(
+            <h2>Loading...</h2>
+        )
+    }
+    // const dispatch = useDispatch();
 
-    useEffect(()=>{
-        dispatch(fetchSingleProperty(propertyName, _id))
-    },[])
+    // useEffect(()=>{
+    //     dispatch(fetchSingleProperty(propertyName, _id))
+    // },[])
 
-    const property = useSelector((result) => result.propertyReducer.data)
-    console.log(property?.title)
+    // const property = useSelector((result) => result.propertyReducer.data)
+    // console.log(property?.title)
 
     return(
         <>
@@ -49,15 +58,44 @@ export default function ({ propertyName, _id }){
     )
 }
 
-export const getServerSideProps = async (context) =>{
-    const { params, query } = context;
-    const { propertyName } = params;
-    const { _id } = query;
+export const getStaticPaths = async ( context ) =>{
+    // const { params, query } = context;
+    // const { propertyName } = params;
+    // const { _id } = query;
 
+    // console.log(params)
+    const properties = await api.fetchProperties();
+    // console.log(JSON.parse(properties.data))
+    const property = properties.data.map((property)=>{
+        // console.log(property._id)
+        return{
+            params : {
+                propertyName : `${property.title?.replace(/\s+/g, '-')?.replace(/,/g, '')?.toLowerCase()}-${property._id}`,
+            }
+        }
+    })
+    // console.log(property)
+    // const property = await res.json();
+    return{
+        paths : property,
+        fallback : true
+    }
+}
+
+export const getStaticProps = async (context) =>{
+    const { params } = context;
+    const { propertyName,  } = params;
+    const _temp_id = propertyName.split("-")
+    const _id = _temp_id[_temp_id.length -1]
+    console.log(_id)
+    // const { _id } = query;
+    // const _id = propertyName.split('?')[1]
+
+    const property = await api.fetchSingleProperty(propertyName, _id);
+    console.log()
     return{
         props : {
-            propertyName,
-            _id
+            property : property.data
         }
     }
 }

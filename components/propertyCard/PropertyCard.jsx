@@ -2,10 +2,10 @@ import { Typography, Card, CardContent, CardMedia, Grid, StylesProvider, Paper} 
 import styles from './propertyCard.module.css'
 // import dummyPic from '../../../img/propImage/1.jpg'
 
-const PropertyCard = ({image, title, price, state, location, noOfRooms, noOfBaths, type, noOfKitchen}) => {
+const PropertyCard = ({image, title, price, state, location, noOfRooms, noOfBaths, type, noOfKitchen, href}) => {
     return ( 
         <Grid item xs={12} sm={6} md={6} lg={4} xl={3} >
-
+            <a href={href}>
             <Paper>
                 <Grid container className={styles.paper}>
                     <Grid item xs={5} sm={5} className={styles.propertyImage}>
@@ -26,6 +26,8 @@ const PropertyCard = ({image, title, price, state, location, noOfRooms, noOfBath
                     </Grid>
                 </Grid>   
             </Paper>
+            </a>
+            
 
                
                

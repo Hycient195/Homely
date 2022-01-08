@@ -3,26 +3,27 @@ import styles from './properties.module.css'
 import Property from './property/Property'
 // import CardImage from '../../../img/propImage/cardImage.jpg'
 import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 // import { fetchProperties } from '../../../redux/actions/propertyActions'
 import { fetchProperties } from '../../redux/actions/propertyActions';
 import Loading from './loading/Loading';
 import Link from 'next/link';
+import * as api from '../../redux/api/api';
 
-const Properties = () => {
+
+const Properties = ({ data }) => {
+
+    let properties = data;
+
     const dispatch = useDispatch()
-
+    // console.log(properties)
     useEffect(()=>{
         dispatch(fetchProperties())
-    //    const fetcher = async () =>{
-    //     const res = await fetch(`http://localhost:7000/api/property`)
-    //     const data = await res.json()
-    //     console.log(data)
-    //    }
-    //    fetcher()
     },[dispatch])
 
-    const properties = useSelector((result) => result.propertyReducer)
+     properties = useSelector((result) => result.propertyReducer.data)
+    console.log(properties)
+    
     // console.log(properties)
     if(typeof properties == undefined){
         setInterval(() => {
@@ -35,11 +36,11 @@ const Properties = () => {
         <div className={styles.cover}>
         <Container >
             <Grid container spacing={2}>
-                { properties.data ? (
-                    properties.data.map((property)=>(         
+                { properties ? (
+                    properties.map((property)=>(         
                         <Property   
                             key={property._id}
-                            href={`/property/${property.title.replace(/\s+/g, '-').replace(/,/g, '').toLowerCase()}?_id=${property._id}`}                           
+                            href={`/property/${property.title.replace(/\s+/g, '-').replace(/,/g, '').toLowerCase()}-${property._id}`}                           
                             image={property.images[0]}
                             price={property.price.toString()}
                             title={property.title}
@@ -73,5 +74,6 @@ const Properties = () => {
         </div>
     );
 }
+
  
 export default Properties;

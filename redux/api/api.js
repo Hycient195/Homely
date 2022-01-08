@@ -2,14 +2,16 @@ import axios from 'axios'
 
 /** Specifying API based on development environment */
 let API
-process.env.NODE_ENV == 'development' ?
-    API = axios.create({ baseURL : `http://localhost:7000/api`}) :
-    API = axios.create({ baseURL : `https://homely-apis.herokuapp.com/api`}) 
+API = axios.create({ baseURL : `http://localhost:7000/api`}) 
+
+// process.env.NODE_ENV == 'development' ?
+//     API = axios.create({ baseURL : `http://localhost:7000/api`}) :
+//     API = axios.create({ baseURL : `https://homely-apis.herokuapp.com/api`}) 
 
 /** Querying local storage to obtain logged in user credentials */
 API.interceptors.request.use((req) =>{
-    if(localStorage.getItem('profile')){
-        req.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('profile')).token}`
+    if(global.localStorage?.getItem('profile')){
+        req.headers.Authorization = `Bearer ${JSON.parse(localStorage?.getItem('profile')).token}`
     }
     return req;
 })

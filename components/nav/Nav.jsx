@@ -23,7 +23,7 @@ export default function Nav () {
                 <Container><h1 id="title">Homely</h1></Container>
                 {
                     loggedInVendor === undefined ? (
-                        <Button href='sign_up' variant='contained' className={styles.signIn}>Sign In</Button>
+                        <Button href='/sign_up' variant='contained' className={styles.signIn}>Sign In</Button>
                     ):(
                         <div className={styles.user}>
                             <a href={`/vendor_profile/${loggedInVendor?.result?._id}`}>

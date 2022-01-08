@@ -72,6 +72,7 @@ const VendorProfile = ({ vendorId }) => {
                     vendorProperties ? (
                         vendorProperties.map((property) => (
                             <PropertyCard
+                                href={`/property/${property.title.replace(/\s+/g, '-').replace(/,/g, '').toLowerCase()}-${property._id}`}
                                 key={property._id}
                                 image={property.images[0]}
                                 title={property.title}
