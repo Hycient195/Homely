@@ -28,10 +28,9 @@ export const updateProperty = (propertyId, propertyDetails) => async(dispatch) =
 export const sign_up = (userDetails, router) => async(dispatch) =>{
     try {
         const user = await api.sign_up(userDetails)
-        console.log(user)
+        // console.log(user)
         dispatch({ type : SIGN_UP, payload : user})
         router.push('/')
-        router.go('/')
     } catch (error) {
         console.log(error)
     }
@@ -43,8 +42,7 @@ export const sign_in = (userDetails, router) => async(dispatch) =>{
         console.log(user)
         localStorage.setItem('profile', JSON.stringify(user.data))
         dispatch({ type : SIGN_IN, payload : user})
-        // router.push('/')
-        router.go('/')
+        router.push('/')
     } catch (error) {
         console.log(error)
     }

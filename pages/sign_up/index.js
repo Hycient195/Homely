@@ -44,14 +44,12 @@ const SignUp = () => {
     const handleSign_up = (e) =>{
         e.preventDefault()
         dispatch(sign_up(userDetails, router))
-        console.log(userDetails, router)
     }
 
     /* Sign in handler */
     const handleSign_in = (e) =>{
         e.preventDefault()
         dispatch(sign_in(userDetails, router))
-        console.log(userDetails, router)
     }
     
     return ( 

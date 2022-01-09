@@ -88,8 +88,6 @@ export const getStaticProps = async (context) =>{
     const _temp_id = propertyName.split("-")
     const _id = _temp_id[_temp_id.length -1]
     console.log(_id)
-    // const { _id } = query;
-    // const _id = propertyName.split('?')[1]
 
     const property = await api.fetchSingleProperty(propertyName, _id);
     console.log()
