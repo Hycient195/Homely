@@ -27,29 +27,45 @@
 } */
 .signIn{
     float : right ;
-    margin : 20px 25px 0px 0px !important;
-    background: rgb(155, 245, 20) !important;
+    margin : 15px 15px 0px 0px !important;
+    /* background: rgb(155, 245, 20) !important; */
+    background: teal !important;
+    color: orange !important;
+
+    /* margin: 0 auto; */
+    /* margin-top: 5px; */
+    /* width: 20%; */
+    /* background-color: teal; */
+    /* height : 70px; */
 }
 .avatar{
     height: 50px;
     width : 50px;
     border-radius : 50%;
     /* float : right; */
-    /* margin : 15px 20px 0px 0px !important; */
+    margin : 10px 0px 0px 0px !important;
 
 }
 .user{
-    float : right;
+    /* float : right;
     width: 20%;
-    /* background-color: red; */
+    height: 20px;
+    background-color: red; */
     /* display: inline; */
     /* margin: 15px 10px 0px 0px; */
+
+    float : right;
+    /* margin: 0 auto; */
+    /* margin-top: 10px; */
+    /* width: 20%; */
+    /* background-color: teal; */
+    height : 70px;
 }
 .select{
     /* float : right; */
     padding : 0px 5px;
     margin-top : 20px;
-    background: whitesmoke;
+    background: white;
     width : 25px;
     /* border : 1px solid gre        <Component {...pageProps} />
 y; */
@@ -57,10 +73,23 @@ y; */
 }
 
 .title{
-    text-align: left;
+    /* text-align: left;
     display: inline;
-    /* background-color: teal; */
-    width: 70%;
+    background-color: teal;
+    width: 70%; */
+
+    float: left;
+        display: inline;
+        margin: 3%;
+        width: 80%;
+        height : 80px;
+}
+
+.container{
+    width: 49%;
+    position: fixed;
+    top: 0;
+    height: 70px;
 }
 
 @media only screen and (max-width: 600px){
@@ -99,8 +128,24 @@ y; */
         width: 70%;
         height : 80px;
     }
-
-
+    .select{
+        background-color: whitesmoke;
+        border-bottom: none !important;
+    }
+    .MuiInput-underline{
+        border-bottom: none;
+    }
+    .MuiInput-underline:after {
+        /* left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        position: absolute;
+        transform: scaleX(0);
+        transition: transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms; */
+        border-bottom: 2px solid red !important;
+        /* pointer-events: none; */
+    }
     /* .top_landing_right{
         display : none;
     }
