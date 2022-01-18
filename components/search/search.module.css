@@ -2,10 +2,11 @@
     /* margin : 0 auto; */
 
     /* background : red; */
-    margin: 50px 200px;
-    /* width: 100%; */
+    margin: 50px 0px;
+    margin: 0 auto;
+    width: 300px;
     text-align: center;
-    /* height : 200px; */
+    height : 100px;
 }
 #text_field{
     width : 100%;
@@ -29,6 +30,7 @@
 #contain{
     /* margin-bottom : 100px; */
     padding-bottom : 100px;
+   
 }
 #contain{
     background : linear-gradient(white, white, whitesmoke)
@@ -37,5 +39,5 @@
 
 
 @media only screen and (max-width: 600px){
-    
+
 }

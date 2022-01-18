@@ -143,6 +143,7 @@ const Search = () => {
                                 Prices
                                 <br/>
                                 <select onChange={handlePriceChange} value={price} className="sort-option" name="" id="">
+                                    <option value="">Select Range</option>
                                     <option value="">1,000,000 - 10,000,000</option>
                                     
                                 </select>

@@ -7,8 +7,8 @@ const TopLanding = () => {
             <div className={styles.top_landing_left}>
 
                 <h1 className={styles.find}>Find Your <br/>
-                     Grind <p className={styles.propertyText} > property.</p>
-                </h1>
+                     Grind </h1><p className={styles.propertyText} > property.</p>
+                
                 
             </div>
             <div className={styles.top_landing_right}>
