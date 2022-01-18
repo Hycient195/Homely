@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 .top_landing_left{
     float : left;
     height: 800px;
@@ -10,15 +12,19 @@
     height : 800px;
     width: 50%;
     /* background-color: cyan; */
-    /* background: url(../../../img/landing/landing3.jpg); */
-    background-size: cover;
+    background: url(../../public//landing_photo.jpg);
+    object-position: -40% 0;
+    background-size:cover;
 }
 
 .find{
     /* vertical-align: middle; */
     margin: 300px 0;
     padding-right: 30px;
-    font-family: serif;
+    /* font-family: serif; */
+    font-family: 'Playfair Display', serif;
+    font-style : normal;
+    font-weight : bold;
     text-align: right;
     font-size: 100px;
     /* padding : 200px */
@@ -26,4 +32,27 @@
 
 .container{
     height : 800px;
+}
+
+.propertyText{
+    font-size : 30px;
+    display : inline-block;
+    padding-bottom : 50px;
+}
+
+@media only screen and (max-width: 600px){
+    .top_landing_right{
+        display : none;
+        height: 400px;
+    }
+    .top_landing_left{
+        float : none;
+        width : 80%;
+        margin: 0;
+        padding: 0;
+        height: 400px;
+    }
+    .container{
+        height: 450px;
+    }
 }

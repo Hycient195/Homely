@@ -4,7 +4,7 @@ import styles from './property.module.css'
 
 const Property = ({image, title, price, state, location, noOfRooms, noOfBaths, type, noOfKitchen, href }) => {
     return ( 
-        <Grid item xs={6} sm={4} md={4} >
+        <Grid item xs={6} sm={4} md={4} lg={3} xl={3}>
             <a href={href}>
             <Card id={styles.con}>
                 <CardMedia 

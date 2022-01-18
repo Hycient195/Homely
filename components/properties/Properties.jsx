@@ -34,7 +34,7 @@ const Properties = ({ data }) => {
     
     return ( 
         <div className={styles.cover}>
-        <Container >
+        {/* <Container > */}
             <Grid container spacing={2}>
                 { properties ? (
                     properties.map((property)=>(         
@@ -70,7 +70,7 @@ const Properties = ({ data }) => {
                 }
                 
             </Grid>
-        </Container>
+        {/* </Container> */}
         </div>
     );
 }

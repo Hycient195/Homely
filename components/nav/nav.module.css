@@ -5,6 +5,7 @@
     height : 70px;
     /* float:inline-start; */
     position: fixed;
+    display: inline;
     top : 0;
 }
 .sideNav{
@@ -15,8 +16,9 @@
 .container{
     height: 0px;
     width : 50%;
-    background: tomato !important;
-    margin-bottom : 100px;
+    /* background: tomato !important; */
+    /* margin-bottom : 100px; */
+    padding: 0 5%;
 }
 /* select{
     background : brown;
@@ -25,7 +27,7 @@
 } */
 .signIn{
     float : right ;
-    margin : 20px 20px 0px 0px !important;
+    margin : 20px 25px 0px 0px !important;
     background: rgb(155, 245, 20) !important;
 }
 .avatar{
@@ -38,16 +40,72 @@
 }
 .user{
     float : right;
-    /* background: red; */
-    margin: 15px 10px 0px 0px;
+    width: 20%;
+    /* background-color: red; */
+    /* display: inline; */
+    /* margin: 15px 10px 0px 0px; */
 }
 .select{
-    float : right;
+    /* float : right; */
     padding : 0px 5px;
     margin-top : 20px;
-    background: white;
+    background: whitesmoke;
     width : 25px;
     /* border : 1px solid gre        <Component {...pageProps} />
 y; */
     border-radius: 5px;
+}
+
+.title{
+    text-align: left;
+    display: inline;
+    /* background-color: teal; */
+    width: 70%;
+}
+
+@media only screen and (max-width: 600px){
+    .body{
+        background : white;
+        width : 100%;
+        color : black !important;
+        height : 70px;
+        /* float:inline-start; */
+        position: fixed;
+        top : 0;
+    }
+    .user{
+        float : right;
+        /* margin: 0 auto; */
+        margin-top: 5px;
+        width: 20%;
+        /* background-color: teal; */
+        height : 70px;
+        /* margin: 0; */
+    }
+    .container{
+        width: 100%;
+        /* padding: 3%; */
+        padding: 0px;
+        position: fixed;
+        top : 0;
+        background-color: whitesmoke;
+        /* background-color: blue; */
+        height : 70px;
+    }
+    .title{
+        float: left;
+        display: inline;
+        margin: 3%;
+        width: 70%;
+        height : 80px;
+    }
+
+
+    /* .top_landing_right{
+        display : none;
+    }
+    .top_landing_left{
+        float : none;
+        width : 80%;
+    } */
 }

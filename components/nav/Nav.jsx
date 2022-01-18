@@ -19,8 +19,9 @@ export default function Nav () {
     }
     return(
         <div className={styles.container}>
-            <div className={styles.body}>
-                <Container><h1 id="title">Homely</h1></Container>
+            {/* <div className={styles.body}> */}
+                {/* <Container> */}
+                    <h1 class={styles.title}>Homely</h1>
                 {
                     loggedInVendor === undefined ? (
                         <Button href='/sign_up' variant='contained' className={styles.signIn}>Sign In</Button>
@@ -37,13 +38,14 @@ export default function Nav () {
                         </div>
                     )
                 }
+                {/* </Container> */}
                 <div>
                     {/* <a href={`/vendor_profile/${loggedInVendor._id}`} className=""><Button variant="outlined">Profile</Button></a> */}
 
                     
                 </div>
                 
-            </div>
+            {/* </div> */}
             {/* <Paper className={styles.sideNav}>
             <br/><br/><br/><br/>
             <Button onClick={handleLogout}>Logout</Button>

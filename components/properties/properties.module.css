@@ -1,3 +1,22 @@
 .cover{
     background: whitesmoke;
+    margin: 0 15px;
+}
+
+@media only screen and (min-width : 600px){
+    .cover{
+        margin: 0 20px;
+    }
+}
+
+@media only screen and (min-width : 900px){
+    .cover{
+        margin: 0 45px;
+    }
+}
+
+@media only screen and (min-width : 1100px){
+    .cover{
+        margin : 0 55px;
+    }
 }
