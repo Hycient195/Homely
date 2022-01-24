@@ -3,7 +3,6 @@
     width : 50%;
     color : black !important;
     height : 70px;
-    /* float:inline-start; */
     position: fixed;
     display: inline;
     top : 0;
@@ -16,8 +15,7 @@
 .container{
     height: 0px;
     width : 50%;
-    /* background: tomato !important; */
-    /* margin-bottom : 100px; */
+    background: white !important;
     padding: 0 5%;
 }
 /* select{
@@ -27,10 +25,11 @@
 } */
 .signIn{
     float : right ;
-    margin : 15px 15px 0px 0px !important;
+    margin : 10px 0px 0px 0px !important;
     /* background: rgb(155, 245, 20) !important; */
     background: teal !important;
     color: orange !important;
+    /* width: 18%; */
 
     /* margin: 0 auto; */
     /* margin-top: 5px; */
@@ -67,22 +66,19 @@
     margin-top : 20px;
     background: white;
     width : 25px;
-    /* border : 1px solid gre        <Component {...pageProps} />
-y; */
     border-radius: 5px;
 }
 
 .title{
-    /* text-align: left;
-    display: inline;
-    background-color: teal;
-    width: 70%; */
-
     float: left;
-        display: inline;
-        margin: 3%;
-        width: 80%;
-        height : 80px;
+    display: inline;
+    margin: 3%;
+}
+
+.title_container{
+    width: 80%;
+    height: 80px;
+    background: red;
 }
 
 .container{
