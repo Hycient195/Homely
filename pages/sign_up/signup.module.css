@@ -42,7 +42,7 @@
     /* margin: 10px 0; */
     margin: auto;
     margin-bottom: 15px;
-    margin-top: 10px;
+    margin-top: 1vh;
 }
 
 .password_container{
@@ -66,6 +66,7 @@
     width: 100%;
     background: rgb(24, 146, 146) !important;
     color: orange !important;
+    border: none !important;
 }
 
 .google_submit{
@@ -73,6 +74,7 @@
     width: 100%;
     background: orange !important;
     color: white !important;
+    border: none !important
 }
 
 div.submit_container{
@@ -102,7 +104,7 @@ div.content{
 }
 
 .bottom_text_container{
-    margin: 40px 0;
+    margin: 30px 0;
     color: red;
 }
 
@@ -156,9 +158,10 @@ div.upload_image{
 
 @media only screen and (max-width: 680px){
     div.content{
-        width: 90%;
+        width: 100%;
         /* margin: 10px; */
-        padding: 10%;
+        padding: 7%;
+        /* height: 60vh; */
     }
 
     div.textfield_container{
