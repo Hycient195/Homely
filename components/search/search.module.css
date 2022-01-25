@@ -8,30 +8,38 @@
     text-align: center;
     height : 100px;
 }
+
 #text_field{
     width : 100%;
     /* background : green; */
     font-size: 25px;
     /* padding : 0px 10px; */
 }
+
 .MuiFormLabel-root{
     font-size: 30px;
 }
+
 #sorting_container{
     /* background : red; */
     text-align: center;
 }
-.sort_option{
+
+select.sort_option{
     border : none;
     font-size: 16px;
     background : white;
     color : gray;
+    text-align: center;
 }
+
+
 #contain{
     /* margin-bottom : 100px; */
     padding-bottom : 100px;
    
 }
+
 #contain{
     background : linear-gradient(white, white, whitesmoke)
     /* background : red; */

@@ -53,110 +53,168 @@ const SignUp = () => {
     }
     
     return ( 
-        <div>
+        <div className={styles.wrapper_container}>
             
-            <Container>
+           <div className={styles.content}>
+           <div>
                 {
                     page == SIGN_IN_PAGE?(
                         <Button onClick={togglePage} variant="outlined">Sign Up</Button>
                     ):(
-                        <Button onClick={togglePage} variant="outlined">Sign In</Button>
+                        <Button onClick={togglePage} variant="outlined" >Sign In</Button>
                     )
-                }
-                {/* {JSON.stringify(userDetails)} */}
-                
-               
-            </Container>
+                }                
+               {/* <hr/> */}
+            </div>
             <br/>
+            <hr/>
             {
                 page == SIGN_IN_PAGE?(
-                    <form onSubmit={handleSign_in}>
-                    <TextField
-                        type="text"
-                        variant="outlined"   
-                        label="Email"  
-                        name="email"
-                        value={userDetails.email}  
-                        onChange={(e)=> setUserDetails({...userDetails, email : e.target.value})}                    
-                    />
-                    <TextField
-                        variant="outlined"     
-                        name="password"
-                        type="password"
-                        label="Password"
-                        value={userDetails.password}  
-                        onChange={(e)=> setUserDetails({...userDetails, password : e.target.value})}                    
-                        />
-                    <Button variant="outlined" type="submit">Submit</Button>
+                    <form onSubmit={handleSign_in} className={styles.sign_in_form}>
+                        <Typography variant="h3" className={styles.login_text}>Login</Typography>
+                    {/* <fieldset className={styles.fieldset}> */}
+                        {/* <legend className={styles.legend}>Enter Your Credentials</legend> */}
+                        <div className={styles.email_container}>
+                            <TextField
+                            className={styles.email}
+                            type="text"
+                            variant="standard"   
+                            label="Email"  
+                            name="email"
+                            value={userDetails.email}  
+                            onChange={(e)=> setUserDetails({...userDetails, email : e.target.value})}                    
+                            />
+                        </div>
+                        <div className={styles.password_container}>
+                            <TextField
+                            className={styles.password}
+                            variant="standard"     
+                            name="password"
+                            type="password"
+                            label="Password"
+                            value={userDetails.password}  
+                            onChange={(e)=> setUserDetails({...userDetails, password : e.target.value})}                    
+                            />
+                        </div>
 
+                        <div className={styles.submit_container}>
+                            <Button variant="outlined" type="submit" className={styles.submit}>Submit</Button>
+                        </div>
+
+                    {/* </fieldset> */}
+                    <div className={styles.submit_container}>
+                        <Button variant="outlined" className={styles.google_submit}>Sign In With Google Account</Button>
+                    </div>
                 </form>
                 ):(
-                    <Container>
-                    <form onSubmit={handleSign_up}>
+                    // <Container>
+                    <form onSubmit={handleSign_up} className={styles.sign_up_form}>
+
+                        <Typography  className={styles.sign_up_text}>Sign Up</Typography>
+
+                        <div className={styles.textfield_container}>
                         <TextField
                             type="text" 
+                            fullWidth
+                            className={styles.textfield}
                             variant="outlined"     
                             name="firstName"
                             label="First Name"
                             value={userDetails.firstName}  
                             onChange={(e)=> setUserDetails({...userDetails, firstName : e.target.value})}                    
-                        />
+                            />
+                        </div>
+
+                        <div className={styles.textfield_container}>
                         <TextField
                             type="text" 
+                            className={styles.textfield}
                             variant="outlined"     
                             name="lastName"
                             label="Last Name"
                             value={userDetails.lastName}  
                             onChange={(e)=> setUserDetails({...userDetails, lastName : e.target.value})}                    
-                        />
-                        <br/><br/>
+                            />
+                        </div>
+
+                        <div className={styles.textfield_container}>
                         <TextField
                             type="text" 
+                            className={styles.textfield}
                             variant="outlined"     
                             name="email"
                             label="Email"
                             value={userDetails.email}  
                             onChange={(e)=> setUserDetails({...userDetails, email : e.target.value})}                    
-                        />
+                            />
+                        </div>
+
+                        <div className={styles.textfield_container}>
                         <TextField
                             type="text" 
+                            className={styles.textfield}
                             variant="outlined"     
                             name="phoneNumber"
                             label="Phone Number"
                             value={userDetails.phoneNumber}  
                             onChange={(e)=> setUserDetails({...userDetails, phoneNumber : e.target.value})}                    
-                        />
-                        <br/><br/>
+                            />
+                        </div>
+
+                        <div className={styles.textfield_container}>
                         <TextField
-                            variant="outlined"     
+                            variant="outlined"  
+                            className={styles.textfield}   
                             name={`password`}
                             type={'password'}
                             label="Password"
                             value={userDetails.password}  
                             onChange={(e)=> setUserDetails({...userDetails, password : e.target.value})}                    
-                        />
-                        <br/><br/>Upload Property Images
-                        <FileBase
-                            multiple={false}
-                            type="file"
-                            onDone={({base64})=> setUserDetails({...userDetails, avatar : base64 })}
-                        />
-                        <br/><br/>
-                    <Button variant="outlined" type="submit">Submit</Button>
+                            />
+                        </div>
+                        
+                        <div className={styles.upload_image}>
+                            <br/><br/>Select Profile Picture {" => "} 
+                            <FileBase
+                                multiple={false}
+                                type="file"
+                                className={styles.filebase}
+                                onDone={({base64})=> setUserDetails({...userDetails, avatar : base64 })}
+                            />
+                            <br/><br/>
+                        </div>
+                        <div className="submit_container">
+                            <Button variant="outlined" type="submit" className={styles.submit}>Submit</Button>
+                        </div>
                 </form>
-                </Container>
+                // </Container>
                 )
             }
             {
                 page == SIGN_IN_PAGE?(
-                    <Typography>Don&apos;t have an account? sign up above</Typography>
+                    <div className={styles.bottom_text_container}>
+                        <Typography className={styles.bottom_text}>Don&apos;t have an account? sign up above</Typography>
+                    </div>
                 ):(
-                    <Typography>Have an account? sign in above</Typography>
+                    <div className={styles.bottom_text_container}>
+                        <Typography className={styles.bottom_text}>Have an account? sign in above</Typography>
+                    </div>
                 )
             }
+           </div>
 
         </div>
      );
 }
+
  
 export default SignUp;
+
+SignUp.getLayout = function PageLayout (page){
+    return(
+        <>
+            { page }
+        {/* This position is for footer when included */}
+        </>
+    )
+}

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+.wrapper_container{
+    padding: 80px 30px;
+    font-family: 'Playfair Display', serif;
+    font-style : normal;
+    /* margin-top: 90px; */
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.815), rgb(238, 128, 108));
+    /* background: rgba(215, 0, 222, 0.3); */
+    /* height: 1000px; */
+    /* text-align: center; */
+}
+
+.sign_in_form{
+    /* margin: 0 auto; */
+    /* background: green; */
+    /* height: 89px; */
+    width: 100%;
+    margin-top: 40px;
+}
+
+.email{
+    /* display: block; */
+    margin: 0 auto;
+    margin: 10px 0;
+    width: 100%;
+    /* background: blue; */
+}
+
+.password{
+    /* display: block; */
+    margin: 20px 0;
+    width: 100%;
+}
+
+.email_container{
+    width: 100%;
+    /* height: 200px; */
+    /* background: orange; */
+    /* margin: 10px 0; */
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.password_container{
+    width: 100%;
+    margin: 15px 0;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 15px;
+}
+
+.fieldset{
+    border-radius: 7px;
+    border: 1px solid silver;
+    width: 100%;
+    margin: 0 auto;
+    /* background: red; */
+}
+
+.submit{
+    margin: 0 auto;
+    width: 100%;
+    background: rgb(24, 146, 146) !important;
+    color: orange !important;
+}
+
+.google_submit{
+    margin: 0 auto;
+    width: 100%;
+    background: orange !important;
+    color: white !important;
+}
+
+div.submit_container{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 15px ;
+}
+
+legend.legend{
+    color: grey;
+    /* margin: 0 20px; */
+}
+
+div.content{
+    /* background: cyan; */
+    width: 600px;
+    margin: 0 auto;
+    padding: 70px;
+    background: white;
+}
+
+.bottom_text{
+    text-align: center;
+    /* margin: 40px 50px; */
+    margin-top: 40px;
+    /* color: red; */
+}
+
+.bottom_text_container{
+    margin: 40px 0;
+    color: red;
+}
+
+.login_text{
+    font-size: 35px !important;
+    font-family: 'Playfair Display', serif !important;
+    font-style : normal !important;
+    font-weight: 500 !important;
+}
+
+
+
+
+
+/* Handler for The Sign Up form */
+
+div.textfield_container{
+    width: 47%;
+    display: inline-block;
+    margin: 5px;
+    /* background: navy; */
+}
+
+.textfield{
+    width: 100%;
+}
+
+.sign_up_form{
+    width: 100% !important;
+}
+
+.sign_up_text{
+    font-size: 35px !important;
+    font-family: 'Playfair Display', serif !important;
+    font-style : normal !important;
+    font-weight: 500 !important;
+    /* color: red !important; */
+    margin: 30px 0 !important;
+}
+
+div.upload_image{
+    text-align: center;
+    margin: 0 auto;
+    /* background: red !important; */
+}
+
+.filebase{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@media only screen and (max-width: 680px){
+    div.content{
+        width: 90%;
+        /* margin: 10px; */
+        padding: 10%;
+    }
+
+    div.textfield_container{
+        width: 45%;
+        display: inline-block;
+        margin: 5px;
+        /* background: navy; */
+    }
+}

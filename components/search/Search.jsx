@@ -99,6 +99,7 @@ const Search = () => {
                 {/* Search Bar */}
             <form id={styles.search_container} >
                 <TextField 
+                    className={styles.search}
                     label="Search" 
                     value={searchQuery} 
                     onChange={ handleSearch } 
@@ -130,7 +131,7 @@ const Search = () => {
                                 </select>
                                 {
                                     loading.typeLoading &&
-                                    <Box sx={{ width : '100%' }} >
+                                    <Box sx={{ width : '50%', margin: '0 auto' }} >
                                         <LinearProgress/>
                                     </Box>
                                 }
@@ -142,14 +143,14 @@ const Search = () => {
                             <Typography variant="h4">
                                 Prices
                                 <br/>
-                                <select onChange={handlePriceChange} value={price} className="sort-option" name="" id="">
+                                <select onChange={handlePriceChange} value={price} className={styles.sort_option} name="" id="">
                                     <option value="">Select Range</option>
                                     <option value="">1,000,000 - 10,000,000</option>
                                     
                                 </select>
                                 {
                                     loading.priceLoading &&
-                                    <Box sx={{ width : '100%' }}>
+                                    <Box sx={{ width : '50%',  margin: '0 auto' }}>
                                         <LinearProgress/>
                                     </Box>
                                 }
@@ -190,7 +191,7 @@ const Search = () => {
                                 </select>
                                 {
                                     loading.stateLoading &&
-                                    <Box sx={{ width : '100%' }}>
+                                    <Box sx={{ width : '50%',  margin: '0 auto'  }}>
                                         <LinearProgress/>
                                     </Box>
                                 }
