@@ -27,14 +27,14 @@
     float : right ;
     margin : 13px 0px 0px 0px !important;
     /* background: rgb(155, 245, 20) !important; */
-    background: teal !important;
+    /* background: teal; */
     color: orange !important;
     /* width: 18%; */
 
     /* margin: 0 auto; */
     /* margin-top: 5px; */
     /* width: 20%; */
-    /* background-color: teal; */
+    background-color: teal !important;
     /* height : 70px; */
 }
 .avatar{
@@ -57,7 +57,7 @@
     /* margin: 0 auto; */
     /* margin-top: 10px; */
     /* width: 20%; */
-    /* background-color: teal; */
+    /* background-color: white !important; */
     height : 70px;
 }
 .select{

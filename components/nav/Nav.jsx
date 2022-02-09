@@ -24,21 +24,22 @@ export default function Nav () {
                     <h1 class={styles.title}>Homely</h1>
                </div>
             {
-                loggedInVendor === undefined ? (
-                    <div className={styles.signin_container}>
-                        <Button href='/sign_up' variant='contained' className={styles.signIn}>Sign In</Button>
-                    </div>
-                ):(
+                loggedInVendor ? (
                     <div className={styles.user}>
-                        <a href={`/vendor_profile/${loggedInVendor?.result?._id}`}>
-                            <img className={styles.avatar} src={loggedInVendor?.result?.avatar} alt=""/>
-                        </a>
-                        <Select name="" id="" className={styles.select}>
-                            <option value=""></option>
-                            <option value="">Profile</option>
-                            <option onClick={handleLogout} value="">Logout</option>
-                        </Select>
-                    </div>
+                    <a href={`/vendor_profile/${loggedInVendor?.result?._id}`}>
+                        <img className={styles.avatar} src={loggedInVendor?.result?.avatar} alt=""/>
+                    </a>
+                    <Select name="" id="" className={styles.select}>
+                        <option value=""></option>
+                        <option value="">Profile</option>
+                        <option onClick={handleLogout} value="">Logout</option>
+                    </Select>
+                </div>
+                    
+                ):(
+                    // <div className={styles.signin_container}>
+                        <Button href='/sign_up' variant='contained' className={styles.signIn}>Sign In</Button>
+                    // </div>
                 )
             }
             {/* </Container> */}

@@ -12,7 +12,7 @@
     height: 100vh;
     width: 100%;
     /* background: linear-gradient(90deg, rgba(255, 0, 0, 0.815), rgb(238, 128, 108)); */
-    background: url(../../public//sign_in_background.jpg);
+    background: url(../../public/sign_in_background.jpg);
     background-size: 100%;
     /* background-blend-mode: saturation; */
     /* background: rgba(215, 0, 222, 0.3); */
@@ -25,9 +25,12 @@
     /* background: green; */
     /* height: 89px; */
     width: 100%;
-    margin-top: 40px;
+    margin-top: 3vh;
 }
 
+.sign_up_form{
+    margin-top: 3vh;
+}
 .email{
     /* display: block; */
     margin: 0 auto;
@@ -59,6 +62,7 @@
 
 .password > label, .password > div, .password > label:active{
     color: white !important;
+    font-size: 1em;
 }
 
 .email_container{
@@ -78,7 +82,7 @@
     width: 100%;
     margin: 15px 0;
     margin: 0 auto;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     color: white !important;
     margin-top: 15px;
 }
@@ -129,8 +133,9 @@ div.content{
 
 .bottom_text{
     text-align: center;
+    font-size: 0.9em !important;
     /* margin: 40px 50px; */
-    margin-top: 40px;
+    /* margin-top: 40px; */
     /* color: red; */
 }
 
@@ -140,8 +145,9 @@ div.content{
 }
 
 .bottom_text_container{
-    margin: 30px 0;
+    margin: 40px 0 15px 0;
     color: white;
+ 
 }
 
 .login_text{
@@ -159,8 +165,9 @@ div.content{
     border-bottom: 1px solid white !important;
 }
 
-.textfield > label{
-    color: white;
+.textfield > label, .textfield > label:active{
+    color: ghostwhite !important;
+    font-size: 0.8em;
 }
 
 
@@ -215,7 +222,7 @@ div > #logos{
     position: absolute;
     color: white;
     /* background-color: red; */
-    left: -12% !important;
+    left: -10% !important;
     top: 20%;
 }
 
@@ -226,12 +233,22 @@ div > #logos{
 }
 
 .forgot_password{
-    color: white;
+    color: whitesmoke;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8em;
     /* text-align: center; */
     /* margin: auto; */
     width: 100%;
     /* text-align: right; */
+}
+
+.upload_image{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9em;
+    height: 4em;
+    margin-top: 2em;
+    border-radius: 5px;
 }
 
 /* .content:first-child{
@@ -243,16 +260,16 @@ div > #logos{
 @media only screen and (max-width: 680px){
 
     .wrapper_container{
-        background: url(../../public//sign_in_background.jpg);
+        background: url(../../public/sign_in_background.jpg);
         background-size: cover;
     }
 
     div.content{
         width: 87%;
         background-color:black;
-        /* opacity: 60%; */
+        opacity: 90%;
         /* margin: 10px; */
-        padding: 10%;
+        padding: 9%;
         margin: 0 auto;
         position: absolute;
         top: 10%;

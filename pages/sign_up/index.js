@@ -134,7 +134,7 @@ const SignUp = () => {
                     // <Container>
                     <form onSubmit={handleSign_up} className={styles.sign_up_form}>
 
-                        <Typography  className={styles.sign_up_text}>Sign Up</Typography>
+                        {/* <Typography  className={styles.sign_up_text}>Sign Up</Typography> */}
 
                         <div className={styles.textfield_container}>
                         <TextField
@@ -197,16 +197,17 @@ const SignUp = () => {
                             />
                         </div>
                         
-                        <div className={styles.upload_image}>
-                            <br/><br/>Select Profile Picture {" => "} 
+                        <fieldset className={styles.upload_image}>
+                            {/* <br/><br/> */}
+                            <legend>Select Profile Picture</legend> 
                             <FileBase
                                 multiple={false}
                                 type="file"
                                 className={styles.filebase}
                                 onDone={({base64})=> setUserDetails({...userDetails, avatar : base64 })}
                             />
-                            <br/><br/>
-                        </div>
+                            {/* <br/><br/> */}
+                        </fieldset>
 
                         {
                             page == SIGN_UP_PAGE &&(
