@@ -5,12 +5,13 @@
 } */
 
 .wrapper_container{
-    padding: 60px 30px;
+    /* padding: 60px 30px; */
     font-family: 'Playfair Display', serif;
     font-style : normal;
+    padding-top: 10vh;
     /* margin-top: 90px; */
     height: 100vh;
-    width: 100%;
+    /* width: 100%; */
     /* background: linear-gradient(90deg, rgba(255, 0, 0, 0.815), rgb(238, 128, 108)); */
     background: url(../../public/sign_in_background.jpg);
     background-size: 100%;
@@ -36,7 +37,7 @@
     margin: 0 auto;
     margin: 10px 0;
     width: 100%;
-    border-bottom: 1px solid white !important;
+    border-bottom: 1px solid grey !important;
     /* background: green; */
     color: red !important;
     /* background: blue; */
@@ -50,13 +51,13 @@
 
 .email > .MuiInput-underline:after{
     background: yellow;
-    border-bottom: 3px solid white !important;
+    border-bottom: 3px solid grey !important;
 }
 .password{
     /* display: block; */
     margin: 20px 0;
     width: 100%;
-    border-bottom: 1px solid white !important;
+    border-bottom: 1px solid grey !important;
     color: white !important;
 }
 
@@ -123,6 +124,7 @@ div.submit_container{
 
 div.content{
     /* background: cyan; */
+    /* position: absolute; */
     width: 600px;
     margin: 0 auto;
     padding: 70px;
@@ -161,9 +163,14 @@ div.content{
     font-weight: 500 !important; */
 }
 
-.textfield{
-    border-bottom: 1px solid white !important;
+.textfield, .textfield > div{
+    border-bottom: 1px solid grey !important;
+    width: 99% !important;
+    color: white !important;
+    /* background-color: yellowgreen; */
+    /* margin: 0 auto; */
 }
+
 
 .textfield > label, .textfield > label:active{
     color: ghostwhite !important;
@@ -174,9 +181,9 @@ div.content{
 /* Handler for The Sign Up form */
 
 div.textfield_container{
-    width: 47%;
+    width: 50%;
     display: inline-block;
-    margin: 5px;
+    /* margin: 5px; */
     /* background: navy; */
 }
 
@@ -247,7 +254,9 @@ div > #logos{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 0.9em;
     height: 4em;
+    width: 100%;
     margin-top: 2em;
+    border: 1px solid grey;
     border-radius: 5px;
 }
 
@@ -262,16 +271,20 @@ div > #logos{
     .wrapper_container{
         background: url(../../public/sign_in_background.jpg);
         background-size: cover;
+        padding-top: 5vh;
     }
 
     div.content{
         width: 87%;
-        background-color:black;
-        opacity: 90%;
+        background-color: black;
+        /* background: repeating-linear-gradient(black, transparent); */
+        /* opacity: 50%; */
+        background-color: rgba(0, 0, 0, 0.8);
         /* margin: 10px; */
+        /* filter: alpha(opacity=50); */
         padding: 9%;
         margin: 0 auto;
-        position: absolute;
+        /* position: absolute; */
         top: 10%;
         /* transform: translateY(-50%); */
         /* z-index: -0; */
@@ -279,9 +292,9 @@ div > #logos{
     }
 
     div.textfield_container{
-        width: 45%;
+        width: 50%;
         display: inline-block;
-        margin: 5px;
+        /* margin: 5px; */
         /* background: navy; */
     }
 }
