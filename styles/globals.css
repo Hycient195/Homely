@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.MuiInput-underline:after{
+    border-bottom: 3px solid white !important;
+}

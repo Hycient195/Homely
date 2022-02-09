@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
+/* *{
+    width: auto;
+} */
 
 .wrapper_container{
     padding: 60px 30px;
@@ -7,7 +10,11 @@
     font-style : normal;
     /* margin-top: 90px; */
     height: 100vh;
-    background: linear-gradient(90deg, rgba(255, 0, 0, 0.815), rgb(238, 128, 108));
+    width: 100%;
+    /* background: linear-gradient(90deg, rgba(255, 0, 0, 0.815), rgb(238, 128, 108)); */
+    background: url(../../public//sign_in_background.jpg);
+    background-size: 100%;
+    /* background-blend-mode: saturation; */
     /* background: rgba(215, 0, 222, 0.3); */
     /* height: 1000px; */
     /* text-align: center; */
@@ -26,13 +33,32 @@
     margin: 0 auto;
     margin: 10px 0;
     width: 100%;
+    border-bottom: 1px solid white !important;
+    /* background: green; */
+    color: red !important;
     /* background: blue; */
 }
 
+.email > label, .email > div, .email > label:active{
+    color: white !important;
+    /* background-color: white; */
+}
+
+
+.email > .MuiInput-underline:after{
+    background: yellow;
+    border-bottom: 3px solid white !important;
+}
 .password{
     /* display: block; */
     margin: 20px 0;
     width: 100%;
+    border-bottom: 1px solid white !important;
+    color: white !important;
+}
+
+.password > label, .password > div, .password > label:active{
+    color: white !important;
 }
 
 .email_container{
@@ -43,6 +69,9 @@
     margin: auto;
     margin-bottom: 15px;
     margin-top: 1vh;
+    z-index: 2;
+    /* color: white !important; */
+    /* background:rgb(24, 146, 146) */
 }
 
 .password_container{
@@ -50,6 +79,7 @@
     margin: 15px 0;
     margin: 0 auto;
     margin-bottom: 50px;
+    color: white !important;
     margin-top: 15px;
 }
 
@@ -64,9 +94,12 @@
 .submit{
     margin: 0 auto;
     width: 100%;
-    background: rgb(24, 146, 146) !important;
-    color: orange !important;
+    /* background: rgb(24, 146, 146) !important; */
+    background: white !important;
+    padding: 3% 0 !important;
+    color: black !important;
     border: none !important;
+    z-index: 2;
 }
 
 .google_submit{
@@ -83,18 +116,16 @@ div.submit_container{
     margin-bottom: 15px ;
 }
 
-legend.legend{
-    color: grey;
-    /* margin: 0 20px; */
-}
 
 div.content{
     /* background: cyan; */
     width: 600px;
     margin: 0 auto;
     padding: 70px;
-    background: white;
+    /* background: white; */
+    background-color:black;
 }
+
 
 .bottom_text{
     text-align: center;
@@ -103,21 +134,34 @@ div.content{
     /* color: red; */
 }
 
+.sign_in_text{
+    color: white !important;
+    text-decoration: underline;
+}
+
 .bottom_text_container{
     margin: 30px 0;
-    color: red;
+    color: white;
 }
 
 .login_text{
     font-size: 35px !important;
-    text-align: center;
+    text-align: left;
+    width: 90%;
+    color: white;
+    display: inline-block;
     /* font-family: 'Playfair Display', serif !important;
     font-style : normal !important;
     font-weight: 500 !important; */
 }
 
+.textfield{
+    border-bottom: 1px solid white !important;
+}
 
-
+.textfield > label{
+    color: white;
+}
 
 
 /* Handler for The Sign Up form */
@@ -157,12 +201,63 @@ div.upload_image{
     margin: 0 !important;
     padding: 0 !important;
 }
+div > #logos{
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: end;
+    width: 100%;
+    position: relative;
+
+    /* background-color: red; */
+}
+
+#back_button{
+    position: absolute;
+    color: white;
+    /* background-color: red; */
+    left: -12% !important;
+    top: 20%;
+}
+
+.forgot_password_container{
+    width: 100%;
+    margin-top: 40px;
+    text-align: center !important;
+}
+
+.forgot_password{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* text-align: center; */
+    /* margin: auto; */
+    width: 100%;
+    /* text-align: right; */
+}
+
+/* .content:first-child{
+    opacity: 80%;
+} */
+
+
 
 @media only screen and (max-width: 680px){
+
+    .wrapper_container{
+        background: url(../../public//sign_in_background.jpg);
+        background-size: cover;
+    }
+
     div.content{
-        width: 100%;
+        width: 87%;
+        background-color:black;
+        /* opacity: 60%; */
         /* margin: 10px; */
-        padding: 7%;
+        padding: 10%;
+        margin: 0 auto;
+        position: absolute;
+        top: 30vw;
+        /* transform: translateY(-50%); */
+        /* z-index: -0; */
         /* height: 60vh; */
     }
 

@@ -6,6 +6,10 @@ import { useRouter } from 'next/router';
 import { sign_up, sign_in } from '../../redux/actions/vendorActions'
 // import { useHistory } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
+import Image from 'next/image';
+import googleLogo from '../../public/google_logo.png';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+
 
 const SignUp = () => {
 
@@ -57,23 +61,34 @@ const SignUp = () => {
             
            <div className={styles.content}>
            <div>
+           
+           <div id={styles.logos}>
+               <ArrowBackIcon id={styles.back_button}>back</ArrowBackIcon>
+               {
+                   page == SIGN_IN_PAGE ?(
+                    <Typography variant="h3" className={styles.login_text}>Login</Typography>
+                   ):(
+                    <Typography variant="h3" className={styles.login_text}>Sign Up</Typography>
+                   )
+               }
+                {/* <Typography variant="h3" className={styles.login_text}>Login</Typography>            */}
+                <Image id={styles.google_logo} width="35" height="35" src={googleLogo} alt="Google Sign in logo"/>
+           </div>
                 {
-                    page == SIGN_IN_PAGE?(
-                        <Button onClick={togglePage} variant="outlined">Sign Up</Button>
-                    ):(
-                        <Button onClick={togglePage} variant="outlined" >Sign In</Button>
-                    )
+                    // page == SIGN_IN_PAGE?(
+                    //     <Button onClick={togglePage} variant="outlined">Sign Up</Button>
+                    // ):(
+                    //     <Button onClick={togglePage} variant="outlined" >Sign In</Button>
+                    // )
                 }                
                {/* <hr/> */}
             </div>
             <br/>
-            <hr/>
+            {/* <hr/> */}
             {
                 page == SIGN_IN_PAGE?(
                     <form onSubmit={handleSign_in} className={styles.sign_in_form}>
-                        <Typography variant="h3" className={styles.login_text}>Login</Typography>
-                    {/* <fieldset className={styles.fieldset}> */}
-                        {/* <legend className={styles.legend}>Enter Your Credentials</legend> */}
+                       {/* <div> */}
                         <div className={styles.email_container}>
                             <TextField
                             className={styles.email}
@@ -96,15 +111,24 @@ const SignUp = () => {
                             onChange={(e)=> setUserDetails({...userDetails, password : e.target.value})}                    
                             />
                         </div>
+                        {/* </div> */}
+                        {
+                            page == SIGN_IN_PAGE &&(
+                                <div className={styles.bottom_text_container}>
+                                    <Typography className={styles.bottom_text}>New User?  <a onClick={togglePage} variant="outlined" class={styles.sign_in_text}>Sign Up</a> here</Typography>
+                                </div>
+                            )
+                        }
 
                         <div className={styles.submit_container}>
-                            <Button variant="outlined" type="submit" className={styles.submit}>Submit</Button>
+                            <Button variant="outlined" type="submit" className={styles.submit}>Proceed</Button>
                         </div>
 
+                        
                     {/* </fieldset> */}
-                    <div className={styles.submit_container}>
+                    {/* <div className={styles.submit_container}>
                         <Button variant="outlined" className={styles.google_submit}>Sign In With Google Account</Button>
-                    </div>
+                    </div> */}
                 </form>
                 ):(
                     // <Container>
@@ -117,7 +141,7 @@ const SignUp = () => {
                             type="text" 
                             fullWidth
                             className={styles.textfield}
-                            variant="outlined"     
+                            variant="standard"     
                             name="firstName"
                             label="First Name"
                             value={userDetails.firstName}  
@@ -129,7 +153,7 @@ const SignUp = () => {
                         <TextField
                             type="text" 
                             className={styles.textfield}
-                            variant="outlined"     
+                            variant="standard"     
                             name="lastName"
                             label="Last Name"
                             value={userDetails.lastName}  
@@ -141,7 +165,7 @@ const SignUp = () => {
                         <TextField
                             type="text" 
                             className={styles.textfield}
-                            variant="outlined"     
+                            variant="standard"     
                             name="email"
                             label="Email"
                             value={userDetails.email}  
@@ -153,7 +177,7 @@ const SignUp = () => {
                         <TextField
                             type="text" 
                             className={styles.textfield}
-                            variant="outlined"     
+                            variant="standard"     
                             name="phoneNumber"
                             label="Phone Number"
                             value={userDetails.phoneNumber}  
@@ -163,7 +187,7 @@ const SignUp = () => {
 
                         <div className={styles.textfield_container}>
                         <TextField
-                            variant="outlined"  
+                            variant="standard"  
                             className={styles.textfield}   
                             name={`password`}
                             type={'password'}
@@ -183,24 +207,27 @@ const SignUp = () => {
                             />
                             <br/><br/>
                         </div>
-                        <div className="submit_container">
-                            <Button variant="outlined" type="submit" className={styles.submit}>Submit</Button>
-                        </div>
+
+                        {
+                            page == SIGN_UP_PAGE &&(
+                                <div className={styles.bottom_text_container}>
+                                    <Typography className={styles.bottom_text}>Already have an account?  <a onClick={togglePage} variant="outlined" class={styles.sign_in_text}>Sign in</a> here</Typography>
+                                </div>
+                            )
+                        }
+
+                        <p className="submit_container">
+                            <Button variant="standard" type="submit" className={styles.submit}>Submit</Button>
+                        </p>
                 </form>
                 // </Container>
                 )
             }
-            {
-                page == SIGN_IN_PAGE?(
-                    <div className={styles.bottom_text_container}>
-                        <Typography className={styles.bottom_text}>Don&apos;t have an account? sign up above</Typography>
-                    </div>
-                ):(
-                    <div className={styles.bottom_text_container}>
-                        <Typography className={styles.bottom_text}>Have an account? sign in above</Typography>
-                    </div>
-                )
-            }
+            <div className={styles.forgot_password_container}>
+                <a className={styles.forgot_password}>
+                    forgot password? Click here
+                </a>
+            </div>
            </div>
 
         </div>
