@@ -129,7 +129,8 @@ div.content{
     margin: 0 auto;
     padding: 70px;
     /* background: white; */
-    background-color:black;
+    /* background-color:black; */
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 

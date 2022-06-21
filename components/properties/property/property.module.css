@@ -1,30 +1,78 @@
+.propertyCard{
+    /* height: 300px; */
+    /* width: 100% !important; */
+    /* background-color: goldenrod; */
+    /* margin: 1em !important; */
+    /* padding: 0 !important; */
+}
+
+.cardContent{
+    padding: 0.5em !important;
+}
+
 #title{
     float : left;
     font-weight: 500;
+    padding: 0;
+    margin: 0;
+    max-height: 2.2em;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
     /* background: brown; */
 }
 
 #price{
-    float : right;
+    /* float : right; */
     font-weight: 1000;
     /* background : red; */
 }
 .titleBlock{
+    display: grid;
+    /* justify-content: space-between; */
+    /* grid-template-rows: 2fr 1fr; */
     padding: 0;
-    height : 35px;
+    height : max-content !important;
+    /* gap: 0.3em; */
+    /* max-height: 3em; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* background-color: green; */
+}
+
+.titleBlock > .typography{
+    font-size: 0.9em !important;
+    padding: 0;
+    margin: 0;
+    margin: 0.4em 0;
+    /* background-color: red !important; */
+}
+
+.cardContent > .typography{
+    font-size: 0.7em;
 }
 #con{
-    transition : all 5s ease;
+    display: grid;
+    grid-template-rows: 150px 150px !important;
+    transition : background 0.5s ease;
     background : white;
+    float: left;
+    height: 100%;
+    width: 100%;
     /* transition-delay: 2000ms; */
 }
 #con:hover{
-    background : linear-gradient(transparent, transparent, black );
+    /* background : linear-gradient(transparent, transparent, black ); */
+    background-color: rgba(0,0,0,0.4);
 }
 .typography{
-    margin : 2px;
+    /* margin : 2px !important; */
     /* background: red; */
 }
 #pic{
-    height : 300px;
+    height: 100%;
+    /* min-height: 160px; */
+    object-fit: cover;
+    /* height : 200px; */
+    /* background-color: blue; */
+    /* object-fit: cover; */
 }

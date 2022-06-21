@@ -4,25 +4,30 @@ import styles from './property.module.css'
 
 const Property = ({image, title, price, state, location, noOfRooms, noOfBaths, type, noOfKitchen, href }) => {
     return ( 
-        <Grid item xs={6} sm={4} md={4} lg={3} xl={3}>
+        <Grid item xs={6} sm={4} md={4} lg={3} xl={3} className={styles.propertyCard}>
             <a href={href}>
             <Card id={styles.con}>
+                <div className="">
                 <CardMedia 
                     component="img"
-                    id="pic"
+                    id={styles.pic}
                     image={image}
                     title=""
                 />
-                <CardContent>
+                </div>
+                <CardContent className={styles.cardContent}>
                     <div className={styles.titleBlock}>
-                        <Typography className="typography" id={styles.title} variant="h6">{title}</Typography>
-                        <Typography className="typography" id={styles.price} variant="h6">${price}</Typography>
+                        <div className={styles.typography} id={styles.title}>
+                            <Typography  variant="p">{title}</Typography>
+                        </div>
+                        <Typography className={styles.typography} id={styles.price} variant="p">${price}</Typography>
                     </div>
-                    <Typography className="typography" color="textSecondary" variant="body2">State: {state}</Typography>
                     {/* <br/> */}
-                    <Typography className="typography" variant="body2" color="textSecondary">{noOfRooms} Bedrooms</Typography>
-                    <Typography className="typography" variant="body2" color="textSecondary">{noOfBaths} Baths</Typography>
-                    <Typography className="typography" variant="body2" color="textSecondary">{noOfKitchen} Kitchen</Typography>
+                    <Typography className={styles.typography} color="textSecondary" variant="body2">State: {state}</Typography>
+                    {/* <br/> */}
+                    <Typography className={styles.typography} variant="body2" color="textSecondary">{noOfRooms} Bedrooms</Typography>
+                    <Typography className={styles.typography} variant="body2" color="textSecondary">{noOfBaths} Baths</Typography>
+                    <Typography className={styles.typography} variant="body2" color="textSecondary">{noOfKitchen} Kitchen</Typography>
                     <div id="vendor">
                         
                     </div>

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import FileBase from 'react-file-base64'
 import { useDispatch, useSelector } from 'react-redux'
 import { uploadProperty } from '../../redux/actions/vendorActions'
+import axios from 'axios';
 // import Properties from '../home/properties/Properties';
 import styles from './addProperty.module.css'
 
@@ -13,16 +14,39 @@ const AddProperty = () => {
     if(typeof window !== 'undefined'){
         loggedInVendor = JSON.parse(localStorage.getItem('profile')).result
     }
+    const [image, setImage] = useState(null);
+    const [createObjectURL, setCreateObjectURL] = useState(null);
 
     const [property, setProperty] = useState({
-        title : '', type : "", location : "miami", size : "200 x 300", noOfRooms : "",
-        images : [] , price : "", state : "", landmark : "", description : "", 
-        ownerId : loggedInVendor?._id, furnishing : "", bathrooms : "", condition : "", 
-        parkingSpace : ""
+        title : 'constant', type : "bungalow", location : "miami", size : "200 x 300", noOfRooms : "3",
+        images : [] , price : "30000", state : "enugu", landmark : "nil", description : "nice prop", 
+        ownerId : loggedInVendor?._id, furnishing : "none", bathrooms : "2", condition : "nice", 
+        parkingSpace : "1"
     })
 
-    const handleSubmit = (e) =>{
+    const imageChange = (event) =>{
+        if(event.target.files && event.target.files[0]){
+            const img = event.target.files[0]
+            // console.log(img)
+            setImage(img);
+            setCreateObjectURL(URL.createObjectURL(img));
+        }
+    }
+
+    // const submitImg = async (e) =>{
+    //     const formData = new FormData();
+    //     formData.append("file", image);
+    //     const res = await fetch("http://localhost:7000/api/property/images",{
+    //         method: 'POST',
+    //         body: formData,
+    //     });
+
+    //     // const some = 
+    // }
+
+    const handleSubmit = async (e) =>{
         e.preventDefault()
+        
         console.log(property)
         dispatch(uploadProperty(property))
         setProperty({ title : '', type : "", location : "", size : "", noOfRooms : "",
@@ -30,7 +54,15 @@ const AddProperty = () => {
             ownerId : loggedInVendor._id, furnishing : "", bathrooms : "", condition : "", 
             parkingSpace : ""
         })
+
+        const formData = new FormData();
+        formData.append("property", image);
+        const res = await fetch("http://localhost:7000/api/property/images",{
+            method: 'POST',
+            body: formData,
+        });
     }
+    
     
     return ( 
         <Container>
@@ -38,7 +70,7 @@ const AddProperty = () => {
             {
                 loggedInVendor?(
 
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} enctype="multipart/form-data" method="POST" action="localhost:7000/api/property/images">
                         <Grid container>
                             <Grid items xs={10} md={6}>
                                 <TextField
@@ -193,7 +225,12 @@ const AddProperty = () => {
                                 </select>
                                 <br/>
                                 <br/>
-                                <FileBase
+                                <input type="file" name="properties"
+                                  onChange={imageChange}
+                                    // onChange={(e) => console.log(e.target.value)}
+                                    />
+                                {/* <button onClick={submitImg} >Upload Img</button> */}
+                                {/* <FileBase
                                     type='file'
                                     multiple={true}
                                     onDone={(data)=>{
@@ -203,7 +240,7 @@ const AddProperty = () => {
                                             img.push(datum.base64)
                                         ))
                                     } }
-                                />
+                                /> */}
                                 <br/><br/>
                                 <Button color="primary" variant="outlined" type="submit">Submit</Button>
                             </Grid>

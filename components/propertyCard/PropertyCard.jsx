@@ -8,7 +8,7 @@ const PropertyCard = ({image, title, price, state, location, noOfRooms, noOfBath
             <a href={href}>
             <Paper>
                 <Grid container className={styles.paper}>
-                    <Grid item xs={5} sm={5} className={styles.propertyImage}>
+                    <Grid className={styles.imageContainer} item xs={5} sm={5} className={styles.propertyImage}>
                         <img className={styles.image} src={image} alt=""/>
                     </Grid>
 
